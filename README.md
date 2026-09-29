@@ -7,7 +7,7 @@ Live demo: Checkout + Sales Dashboard
 
 A responsive checkout flow and a small sales analytics dashboard, built with plain HTML, CSS and JavaScript. No frameworks, no build step, no libraries.
 
-Live demo: https://github.com/Heritage23/checkout-dashboard.git
+Live demo: https://heritage23.github.io/checkout-dashboard/
 
 Screenshot: screenshot.png
 
