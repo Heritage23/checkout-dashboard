@@ -9,8 +9,6 @@ A responsive checkout flow and a small sales analytics dashboard, built with pla
 
 Live demo: https://heritage23.github.io/checkout-dashboard/
 
-Screenshot: screenshot.png
-
 What it shows
 
 **Responsive checkout:** two columns on desktop, one on mobile with the order summary first.
