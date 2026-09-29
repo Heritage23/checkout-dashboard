@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Kola &amp; Co. Checkout</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">Kola &amp; Co.</div>
+        <nav role="tablist" aria-label="View"><button role="tab" id="t1" aria-selected="true">Checkout</button><button
+                role="tab" id="t2" aria-selected="false">Sales dashboard</button></nav>
+    </header>
+    <main>
+        <section id="v1" class="grid">
+            <div class="panel" id="formPanel">
+                <h2>Pay for your order</h2>
+                <div id="formArea">
+                    <label for="email" style="margin-top:0">Email</label><input id="email" type="email"
+                        autocomplete="email" placeholder="ada@example.com">
+                    <div class="err" data-e="email"></div>
+                    <label for="name">Full name</label><input id="name" autocomplete="name" placeholder="Adaeze Okafor">
+                    <div class="err" data-e="name"></div>
+                    <label>Payment method</label>
+                    <div class="seg" role="tablist"><button role="tab" data-m="card"
+                            aria-selected="true">Card</button><button role="tab" data-m="bank"
+                            aria-selected="false">Bank transfer</button></div>
+                    <div id="cardBox">
+                        <div class="scene">
+                            <div class="card3d" id="c3d">
+                                <div class="face">
+                                    <div class="chip"></div><span class="brandtag" id="brand">Card</span>
+                                    <div class="num" id="pNum">•••• •••• •••• ••••</div>
+                                    <div class="meta"><span id="pName">FULL NAME</span><span id="pExp">MM/YY</span>
+                                    </div>
+                                </div>
+                                <div class="face back">
+                                    <div class="strip"></div>
+                                    <div class="cvv" id="pCvv">•••</div>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="num">Card number</label><input id="num" inputmode="numeric" autocomplete="cc-number"
+                            placeholder="4242 4242 4242 4242" maxlength="19">
+                        <div class="err" data-e="num"></div>
+                        <div class="row">
+                            <div><label for="exp">Expiry</label><input id="exp" inputmode="numeric"
+                                    autocomplete="cc-exp" placeholder="MM/YY" maxlength="5">
+                                <div class="err" data-e="exp"></div>
+                            </div>
+                            <div><label for="cvv">CVV</label><input id="cvv" inputmode="numeric" autocomplete="cc-csc"
+                                    placeholder="123" maxlength="3">
+                                <div class="err" data-e="cvv"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bankBox" class="bank hide"><small>Send the exact total to this account, then tap the button
+                            below.</small><br><b>0123456789</b><br><small>Demo Bank · Kola &amp; Co. Ltd</small></div>
+                    <button class="pay" id="pay"></button>
+                </div>
+            </div>
+            <aside class="panel summary">
+                <h2>Your order</h2>
+                <ul id="items"></ul>
+                <div class="tot"><span>Subtotal</span><span id="sub"></span></div>
+                <div class="tot"><span>Delivery (Lagos)</span><span id="ship"></span></div>
+                <div class="tot big"><span>Total</span><span id="total"></span></div>
+            </aside>
+        </section>
+        <section id="v2" class="hide">
+            <div class="kpis" id="kpis"></div>
+            <div class="dash">
+                <div class="panel">
+                    <h2>Revenue, last 14 days</h2>
+                    <div class="chart" id="chart"></div>
+                </div>
+                <div class="panel">
+                    <h2>How people pay</h2>
+                    <div id="methods"></div>
+                    <h2 style="margin-top:28px">Where people drop off</h2>
+                    <div id="funnel"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
